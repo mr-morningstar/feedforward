@@ -1,0 +1,47 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donate Food - FeedForward</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">FeedForward</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Donate Food Section -->
+  <section class="donate-food">
+    <h2>Donate Food</h2>
+    <form id="donateForm">
+      <label for="foodType">Food Type</label>
+      <input type="text" id="foodType" name="foodType" placeholder="E.g., Rice, Pizza" required />
+      
+      <label for="quantity">Quantity</label>
+      <input type="number" id="quantity" name="quantity" placeholder="E.g., 10 kg" required />
+
+      <label for="contact">Contact Details</label>
+      <input type="text" id="contact" name="contact" placeholder="E.g., Name and Phone or Email" required />
+
+      <button type="submit">Donate Food</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 FeedForward. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+

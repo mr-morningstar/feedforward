@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f4f7;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: #c90000;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links li a {
+    color: white; /* Link text color */
+    text-decoration: none; /* Remove the underline */
+    font-weight: 500; /* Optional: You can make it bold */
+    transition: color 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .nav-links li a:hover {
+    color: #18b2d8; /* Change to a lighter shade on hover */
+  }
+  
+  
+  /* Welcome Section */
+  .welcome {
+    text-align: center;
+    padding: 2rem;
+    background-color: white;
+    margin: 2rem auto;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .welcome h1 {
+    font-size: 2rem;
+    color: #3e8e41;
+  }
+  
+  .welcome p {
+    margin-top: 0.5rem;
+    color: #555;
+  }
+  
+  /* Cards Section */
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin: 2rem auto;
+    max-width: 1000px;
+    padding: 1rem;
+  }
+  
+  .card {
+    background-color: white;
+    width: 280px;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card h2 {
+    margin-bottom: 0.5rem;
+    color: #3e8e41;
+  }
+  
+  .card p {
+    margin-bottom: 1rem;
+    color: #555;
+  }
+  
+  .card button {
+    padding: 0.6rem 1.2rem;
+    background-color: #3e8e41;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .card button:hover {
+    background-color: #357a38;
+  }
+  
