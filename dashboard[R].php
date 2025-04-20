@@ -1,8 +1,8 @@
 <?php
 session_start();
 if (!isset($_SESSION['user_id'])) {
-   // header("Location: login.php");
-   // exit();
+   header("Location: login.php");
+   exit();
 }
 ?>
 
@@ -20,7 +20,7 @@ if (!isset($_SESSION['user_id'])) {
     <div class="logo">FeedForward</div>
     <ul class="nav-links">
       <li><a href="#">Home</a></li>
-      <li><a href="login.html">Logout</a></li>
+      <li><a href="logout.php">Logout</a></li>
     </ul>
   </nav>
 

@@ -105,7 +105,7 @@ if (isset($_POST['action']) && $_POST['action'] === 'login') {
             echo json_encode([
                 'success' => true, 
                 'message' => 'Login successful!', 
-                'redirect' => ($role === 'restaurant') ? 'restaurant_dashboard.php' : 'ngo_dashboard.php'
+                'redirect' => ($role === 'restaurant') ? 'dashboard[R].php' : 'dashboard[N].php'
             ]);
         } else {
             outputError('Invalid email or password.');
