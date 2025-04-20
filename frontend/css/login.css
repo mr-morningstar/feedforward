@@ -11,7 +11,7 @@
   
   /* Navbar */
   .navbar {
-    background-color: #3e8e41;
+    background-color: #136415;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -22,6 +22,7 @@
   .logo {
     font-size: 1.8rem;
     font-weight: bold;
+    ;
   }
   
   .nav-links {
