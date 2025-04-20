@@ -132,14 +132,12 @@ body {
 
 .mission-text {
   max-width: 600px;
-  margin-left: 300px;
   text-align: left;
 }
 
 .mission-image img {
   width: 600px;
   border-radius: 8px;
-  padding-left: 20px;
 }
 
 /* Contact Section */
@@ -209,38 +207,62 @@ footer {
   padding: 1rem;
 }
 
-/* Donate Food */
+/* Donate Food Form Styling */
 .donate-food {
   width: 50%;
   margin: 50px auto;
   padding: 20px;
   background-color: #f7f7f7;
   border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   animation: fadeInBody 0.5s ease;
 }
 
 .donate-food h2 {
   text-align: center;
   margin-bottom: 20px;
+  font-size: 2.5rem;
+  color: #136415;
+}
+
+.donate-food label {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #333;
 }
 
 .donate-food input,
 .donate-food button {
+  width: 100%;
   padding: 10px;
   border-radius: 4px;
   border: 1px solid #ccc;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #333;
+  transition: border 0.3s ease;
+}
+
+.donate-food input:focus {
+  border-color: #136415;
+  outline: none;
 }
 
 .donate-food button {
   background-color: #28a745;
   color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.2s, transform 0.1s;
+  font-size: 1.2rem;
+  transition: background-color 0.3s, transform 0.2s ease;
 }
 
 .donate-food button:hover {
   background-color: #218838;
-  transform: scale(1.04);
+  transform: scale(1.05);
 }
 
 /* View Donation Requests */
