@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+   // header("Location: login.php");
+   // exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +26,7 @@
 
   <!-- Welcome Message -->
   <section class="welcome">
-    <h1>Welcome<br>Shubham! 👋</h1>
+  <h1>Welcome, <?php echo htmlspecialchars($_SESSION['user_name']); ?>! 👋</h1>
     <p>Let’s make a difference by reducing food waste.</p>
   </section>
 
