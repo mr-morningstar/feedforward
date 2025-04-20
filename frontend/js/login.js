@@ -1,50 +1,64 @@
-const loginToggle = document.getElementById('loginToggle');
-const registerToggle = document.getElementById('registerToggle');
-const loginForm = document.getElementById('loginForm');
-const registerForm = document.getElementById('registerForm');
-
-// Toggle forms
-loginToggle.addEventListener('click', () => {
-  loginForm.classList.remove('hidden');
-  registerForm.classList.add('hidden');
-  loginToggle.classList.add('active');
-  registerToggle.classList.remove('active');
+// Mobile navbar toggle
+document.getElementById('hamburger').addEventListener('click', () => {
+  const navLinks = document.querySelector('.nav-links');
+  navLinks.classList.toggle('active');
 });
 
-registerToggle.addEventListener('click', () => {
-  loginForm.classList.add('hidden');
-  registerForm.classList.remove('hidden');
-  loginToggle.classList.remove('active');
-  registerToggle.classList.add('active');
+// Get all elements
+const loginToggle = document.getElementById("loginToggle");
+const registerToggle = document.getElementById("registerToggle");
+const loginForm = document.getElementById("loginForm");
+const registerForm = document.getElementById("registerForm");
+const userRole = document.getElementById("userRole");
+
+// Toggle between Login and Register forms
+loginToggle.addEventListener("click", () => {
+  loginForm.classList.remove("hidden");
+  registerForm.classList.add("hidden");
+  loginToggle.classList.add("active");
+  registerToggle.classList.remove("active");
 });
 
-// Login Form Submit
-loginForm.addEventListener('submit', (e) => {
+registerToggle.addEventListener("click", () => {
+  loginForm.classList.add("hidden");
+  registerForm.classList.remove("hidden");
+  registerToggle.classList.add("active");
+  loginToggle.classList.remove("active");
+});
+
+// Login form submission
+loginForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  const email = document.getElementById('loginEmail').value.trim();
-  const password = document.getElementById('loginPassword').value.trim();
+  
+  const email = document.getElementById("loginEmail")?.value.trim();
+  const password = document.getElementById("loginPassword")?.value.trim();
+  const role = userRole.value;
 
   if (!email || !password) {
-    alert("Please enter all login fields.");
+    alert("❌ Please enter all login fields.");
     return;
   }
 
-  alert("Login form submitted ✅");
+  alert(`✅ Login successful as ${role.toUpperCase()}!`);
   loginForm.reset();
 });
 
-// Register Form Submit
-registerForm.addEventListener('submit', (e) => {
+// Register form submission
+registerForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  const name = document.getElementById('registerName').value.trim();
-  const email = document.getElementById('registerEmail').value.trim();
-  const password = document.getElementById('registerPassword').value.trim();
+  
+  const name = document.getElementById("registerName")?.value.trim();
+  const email = document.getElementById("registerEmail")?.value.trim();
+  const address = document.getElementById("registerAddress")?.value.trim();
+  const password = document.getElementById("registerPassword")?.value.trim();
+ 
+  const role = userRole.value;
 
-  if (!name || !email || !password) {
-    alert("Please fill in all register fields.");
+  if (!name || !email || !password || !address) {
+    alert("❌ Please fill in all register fields.");
     return;
   }
 
-  alert("Registration form submitted ✅");
+  alert(`✅ Registered successfully as ${role.toUpperCase()}!`);
   registerForm.reset();
 });
