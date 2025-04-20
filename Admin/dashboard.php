@@ -120,8 +120,8 @@ if (!$ngo_result) {
             <tr>
                 <th>ID</th>
                 <th>Name</th>
-                <th>Description</th>
-                <th>Contact</th>
+                <th>Email</th>
+                <th>Addess</th>
                 <th>Created At</th>
             </tr>
             <?php
@@ -130,8 +130,8 @@ if (!$ngo_result) {
                     echo "<tr>";
                     echo "<td>" . $row['id'] . "</td>";
                     echo "<td>" . htmlspecialchars($row['name']) . "</td>";
-                    echo "<td>" . htmlspecialchars($row['description']) . "</td>";
-                    echo "<td>" . htmlspecialchars($row['contact']) . "</td>";
+                    echo "<td>" . htmlspecialchars($row['email']) . "</td>";
+                    echo "<td>" . htmlspecialchars($row['address']) . "</td>";
                     echo "<td>" . $row['created_at'] . "</td>";
                     echo "</tr>";
                 }
