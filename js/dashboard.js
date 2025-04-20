@@ -1,2 +1,6 @@
-// We'll add real interactivity later when backend is ready
-console.log("Dashboard loaded.");
+function redirectTodonate() {
+    window.location.href = "donate.html";
+}
+function redirectToHistory() {
+    window.location.href = "history.html";
+}

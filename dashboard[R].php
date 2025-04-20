@@ -23,27 +23,27 @@ if (!isset($_SESSION['user_id'])) {
       <li><a href="logout.php">Logout</a></li>
     </ul>
   </nav>
-
+  
   <!-- Welcome Message -->
   <section class="welcome">
-  <h1>Welcome, <?php echo htmlspecialchars($_SESSION['user_name']); ?>! 👋</h1>
+    <h1>Welcome, <?php echo htmlspecialchars($_SESSION['user_name']); ?>! 👋</h1>
     <p>Let’s make a difference by reducing food waste.</p>
   </section>
-
+  
   <!-- Action Cards -->
   <section class="cards">
     <div class="card">
       <h3>🍲 Donate Food</h3>
       <p>Share excess food with those who need it.</p>
-      <button onclick="alert('Coming soon: Donate Food form')">Donate</button>
+      <button id="myButton" onclick="redirectTodonate()">Donate</button>
     </div>
     <div class="card">
       <h3>📄 Donation History</h3>
       <p>Track your past donations (Coming soon).</p>
-      <button onclick="alert('Coming soon: Donation History')">History</button>
+      <button onclick="redirectToHistory()">History</button>
     </div>
   </section>
-
-  <script src="js/dashboard.js"></script>
+  
+<script src="js/dashboard.js"></script>
 </body> 
 </html>
