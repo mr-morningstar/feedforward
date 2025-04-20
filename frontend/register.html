@@ -7,34 +7,41 @@
   <link rel="stylesheet" href="css/register.css" />
 </head>
 <body>
+
   <!-- Navbar -->
   <nav class="navbar">
-    <div class="logo">FeedForward</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="index.html#about">About</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
-      <li><a href="login.html">Login</a></li> <!-- Link to Login Page -->
-    </ul>
+    <div class="navbar-container">
+      <div class="logo">FeedForward</div>
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </div>
   </nav>
 
   <!-- Form Container -->
   <div class="container">
-    <!-- Register Form -->
     <form id="registerForm" class="form">
       <h2>Create an Account</h2>
       <input type="text" placeholder="Full Name" id="registerName" required />
       <input type="email" placeholder="Email" id="registerEmail" required />
       <input type="password" placeholder="Password" id="registerPassword" required />
       <input type="text" placeholder="Address" id="registerAddress" required />
-      
       <button type="submit">Register</button>
     </form>
-    
-    <!-- Redirect to Login -->
     <p>Already have an account? <a href="login.html">Login here</a></p>
   </div>
 
-  <script src="js/login.js"></script>
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    toggleBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
